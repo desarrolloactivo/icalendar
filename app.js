@@ -11,8 +11,21 @@ cal.createEvent({
     summary: 'Example Event',
     description: 'It works ;)',
     location: 'my room',
+    organizer: 'Esteban Fuster <estebanrfp@gmail.com>'
     url: 'http://desarrolloactivo.com/'
 });
+
+cal.repeating({
+    freq: 'MONTHLY', // required 
+    count: 5,
+    interval: 2,
+    until: new Date('Jan 01 2014 00:00:00 UTC')
+});
+
+cal.attendees([
+    {email: 'estebanrfp@gmail.com', name: 'Person A'},
+    {email: 'agustin@icloud.com', name: 'Person B'}
+]);
  
 http.createServer(function(req, res) {
     cal.serve(res);
