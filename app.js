@@ -3,7 +3,7 @@ var ical = require('ical-generator'),
     cal = ical({domain: 'github.com', name: 'my first iCal'});
  
 // overwrite domain 
-cal.domain('sebbo.net');
+cal.domain('desarrolloactivo.com');
  
 cal.createEvent({
     start: new Date(),
@@ -11,7 +11,7 @@ cal.createEvent({
     summary: 'Example Event',
     description: 'It works ;)',
     location: 'my room',
-    url: 'http://sebbo.net/'
+    url: 'http://desarrolloactivo.com/'
 });
  
 http.createServer(function(req, res) {
