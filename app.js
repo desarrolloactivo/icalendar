@@ -1,10 +1,18 @@
 var ical = require('ical-generator'),
     http = require('http'),
-    cal = ical({domain: 'desarrolloactivo.com', name: 'Mi primer horario programado de Platzi'});
- 
+    //cal = ical({domain: 'desarrolloactivo.com', name: 'Mi primer horario programado de Platzi'});
+
+    cal = ical({
+        domain: 'desarrolloactivo.com',
+        prodId: {company: 'desarrolloactivo.com', product: 'Platzi cursos'},
+        name: 'Platzi cursos',
+        timezone: 'Europe/Berlin'
+    }),
+
+
 // overwrite domain 
 cal.domain('desarrolloactivo.com');
- 
+
 cal.createEvent({
     start: new Date(),
     end: new Date(new Date().getTime() + 3600000),
