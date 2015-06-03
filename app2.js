@@ -18,7 +18,7 @@ cal.createEvent({
     summary: 'Example Event',
     description: 'It works ;)',
     location: 'my room',
-    url: 'http://sebbo.net/'
+    url: 'http://desarrolloactivo.com/'
 });
 
 
